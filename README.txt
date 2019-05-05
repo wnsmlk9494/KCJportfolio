@@ -1,9 +1,9 @@
 
 TITLE: 
-Hold - Fully Responsive Free HTML5 template
+Justice - 100% Fully Responsive Free HTML5 Bootstrap Template
 
 AUTHOR:
-DESIGNED & DEVELOPED by FREEHTML5.co
+DESIGNED & DEVELOPED by FreeHTML5.co
 
 Website: http://freehtml5.co/
 Twitter: http://twitter.com/fh5co
@@ -24,15 +24,6 @@ http://gsgd.co.uk/sandbox/jquery/easing/
 Modernizr
 http://modernizr.com/
 
-Google Map
-https://map.google.com/
-
-jQuery Cookie
-https://github.com/carhartl/jquery-cookie
-
-Viewport-Units-Buggyfill
-https://github.com/rodneyrehm/viewport-units-buggyfill/
-
 Google Fonts
 https://www.google.com/fonts/
 
@@ -47,6 +38,13 @@ http://daneden.me/animate
 
 jQuery Waypoint
 https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
+
+Stellar Parallax
+http://markdalgleish.com/projects/stellar.js/
+
+
+Magnific Popup
+http://dimsemenov.com/plugins/magnific-popup/
 
 Demo Images:
 http://unsplash.com
