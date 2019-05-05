@@ -509,7 +509,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		top: 0;
 		left: 0;
 		right: 0;
-		background: rgba(35, 35, 35, .5);
+		background: rgba(35, 35, 35, 0.9);
 	}
 	> .container {
 		position: relative;
@@ -625,8 +625,10 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 	.gtco-practice-area-item {
 		margin-bottom: 30px;
+		float:left;
 		.gtco-icon,
 		.gtco-copy {
+			width:auto;
 			display: table-cell;
 			vertical-align: top;
 		}
