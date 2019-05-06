@@ -864,7 +864,7 @@ form label {
   position: fixed;
   z-index: 1901;
   width: 270px;
-  background: black;
+/*   background: black; */
   top: 0;
   right: 0;
   top: 0;
@@ -894,6 +894,7 @@ form label {
   transform: translateX(0px);
 }
 #gtco-offcanvas a {
+/*   color: rgba(255, 255, 255, 0.5); */
   color: rgba(255, 255, 255, 0.5);
 }
 #gtco-offcanvas a:hover {

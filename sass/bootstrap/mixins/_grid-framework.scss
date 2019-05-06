@@ -31,11 +31,6 @@
 
 
 @mixin calc-grid-column($index, $class, $type) {
-  @if ($type == width) and ($index > 0) {
-    .col-#{$class}-#{$index} {
-      width: percentage(($index / $grid-columns));
-    }
-  }
   @if ($type == push) and ($index > 0) {
     .col-#{$class}-push-#{$index} {
       left: percentage(($index / $grid-columns));
