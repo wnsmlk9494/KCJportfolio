@@ -624,7 +624,6 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 	}
 	.gtco-practice-area-item {
-		margin-bottom: 30px;
 		float:left;
 		.gtco-icon,
 		.gtco-copy {
@@ -633,7 +632,6 @@ h1, h2, h3, h4, h5, h6, figure {
 			vertical-align: top;
 		}
 		.gtco-icon {
-			width: 100px;
 			@media screen and (max-width: $screen-sm) {
 				width: 70px;
 			}
