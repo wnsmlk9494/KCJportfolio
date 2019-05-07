@@ -59,19 +59,26 @@
 			.display-tc span {margin-bottom:30px; font-size:5vw; line-height:1.5; font-weight:100; marign:0; padding:0; color:white; opacity:0; font-family:"Open Sans", Arial, sans-serif;}
 			.display-tc h1 {font-size:4vw !important;}
 			
-			.subh1:after {
-			bottom: 0;
-			left: 50%;
-			margin-left: -36px;
-			content: "";
-			position: absolute;
-			width: 72px;
-			height: 2px;
-			background:#7ED321;
-			}
-			
 			#gtco-offcanvas {padding:69px 40px 45px 10px !important; width:auto;}
-			table:hover {opacity:0.4;}
+			
+			.Row {display:flex; flex-wrap:wrap;}
+			.Box {height: 360px; min-width:70vw; max-width:80vw; border-radius:10px; margin:0 auto 30px; background: #ffffff; box-shadow:5px 5px 10px rgba(0,0,0,.2), 5px 5px 10px rgba(0,0,0,.2); overflow:hidden;}
+			.Box_info {padding:10px 0; height:100%;}
+			.Box_image {float:left; width:35%; height:360px; margin-right:2rem;}
+			.Box_title {font-size:1.5em; font-weight:bold; margin:10px;}
+			.Box_date {font-size:1em; margin:10px;}
+			.Box_content {font-size:1em; margin:10px;}
+			
+			@media all and (max-width:576px){
+				.Box, .Row {width:100%;}
+				.Box {margin-right:3%; margin-left:3%; max-width:100%; height:50%;}
+				.Box_info{height:100%;}
+				.Box_image{float:left; height:59%; width:100%;}
+				.Box_image image{width:100%;}
+				.Box_title {font-size:1.5em; font-weight:bold; margin:10px;}
+				.Box_date {font-size:1em; margin:10px;}
+				.Box_content {font-size:1em; margin:10px;}
+			}
 		</style>
 	</head>
 	<body>
@@ -122,7 +129,7 @@
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-					<h1>About Me. </h1>
+					<h1 style="font-size:2.5em;">About Me. </h1>
 					<p class="sub">"개발은 어떨까?" 가벼운 시작에서, 이제는 나의 꿈이 된 개발자. 그렇기에 지금도 개발을 하고 있습니다.
 					어제보다 더 나은 오늘의 내가 되는 것이 1순위 목표입니다. IT학과를 선택한 과거의 자신과, 개발자의 꿈을 가질 기회를 주신 모든 것에 감사드립니다.</p>
 				</div>
@@ -136,7 +143,7 @@
 				<div class="col-md-6 skill">
 					<div class="animate-box" style="margin-bottom:15px;">
 						<div class="gtco-copy" style="display:inline-block;">
-							<h3 style="font-size:25px;">Language</h3>
+							<h3 style="font-size:1.5em;">- Language -</h3>
 						</div>
 					</div>
 				
@@ -179,7 +186,7 @@
 				<div class="col-md-6 skill">
 					<div class="animate-box" style="margin-bottom:15px;">
 						<div class="gtco-copy" style="display:inline-block;">
-							<h3 style="font-size:25px;">Web skill</h3>
+							<h3 style="font-size:1.5em;">- Web skill -</h3>
 						</div>
 					</div>
 					<div class="skill_content">
@@ -200,7 +207,7 @@
 				<div class="col-md-6 skill">
 					<div class="animate-box" style="margin-bottom:15px;">
 						<div class="gtco-copy" style="display:inline-block;">
-							<h3 style="font-size:25px;">Database</h3>
+							<h3 style="font-size:1.5em;">- Database -</h3>
 						</div>
 					</div>
 					
@@ -215,7 +222,7 @@
 				<div class="col-md-6 skill">
 					<div class="animate-box" style="margin-bottom:15px;">
 						<div class="gtco-copy" style="display:inline-block;">
-							<h3 style="font-size:25px;">Operating System</h3>
+							<h3 style="font-size:1.5em;">- Operating System -</h3>
 						</div>
 					</div>
 					
@@ -230,7 +237,7 @@
 				<div class="col-md-6 skill">
 					<div class="animate-box" style="margin-bottom:15px;">
 						<div class="gtco-copy" style="display:inline-block;">
-							<h3 style="font-size:25px;">Other Tools</h3>
+							<h3 style="font-size:1.5em;">- Other Tools -</h3>
 						</div>
 					</div>
 					
@@ -260,41 +267,28 @@
 		</div>
 	</section>
 
-	<section id="gtco-our-team" data-section="our-team" style="padding:0; background:rgb(240,240,238);">
-		<div class="container" style="padding:7em 0;">
-			<div class="row row-pb-md" style="padding:0 !important; margin:0;">
-				<div class="col-md-8 animate-box" data-animate-effect="fadeIn" style="padding:0; margin-bottom:20px; width:100%; text-align:center;">
-					<h1 class="subh1" style="margin-bottom:15px;">My Project</h1>
+	<section id="gtco-our-team" data-section="our-team" style="padding:7em 0; background:rgb(240,240,238);">
+		<div class="Container">
+			<div class="Row">
+				<div class="animate-box" data-animate-effect="fadeIn" style="padding:0; margin-bottom:20px; width:100%; text-align:center;">
+					<h1 style="margin-bottom:15px; font-size:2em">My Project.</h1>
 				</div>
-				<div class="col-md-8 animate-box" data-animate-effect="fadeIn" style="padding:0; margin-bottom:20px; width:100%; text-align:center; display:inline-block;">
-					<table style="width:100%; height:100%; display:inline-block; border:1px solid #000; box-shadow:5px 5px; cursor:pointer;" onclick="fn_go('1')">
-					<script>
-						function fn_go(gbn){
-							if(gbn=="1"){
-								location.href="http://kcjcinema.cafe24.com/";
-							}
-						}
-					</script>
-						<colgroup>
-							<col style="width:35%;">
-							<col style="width:64.9%;">
-						</colgroup>
-						<tr>
-							<td>
-								<div class="gtco-icon" style="width:100%;">
-									<img src="images/kcjcinema_project.png" alt="sqlyog" style="width:100%;">
-								</div>								
-							</td>
-							<td style="vertical-align:top; text-align:left; padding-left:15px;">
-								<p style="margin:0 10px 10px 10px; font-weight:bold;">KCJ CINMEA</p>
-								<p style="margin:0 10px 10px 10px;">개발기간 : 2018.12 ~ 2019.4</p>
-								<p style="margin:0 10px 10px 10px;">'회원가입 및 로그인', '영화 관련 정보', '영화 예약 및 관리', '영화 관련 댓글 및 평점' 을 구현한 극장 홈페이지 개발.</p>								
-							</td>
-						</tr>
-					</table>
+				<div class="Box">
+					<div class="Box_image">
+						<a href="https://github.com/weaklion/React-spa">
+							<img class="image" alt="sia" src="images/kcjcinema_project.png" style="width:100%; height:360px;">
+						</a>
+					</div>
+					<div class="Box_info">
+						<p class="Box_title">KCJ CINEMA</h1>
+						<p class="Box_date">개발기간 :2018.12 ~ 2019.04</h2>
+						<p class="Box_content">스프링 프레임워크 및 JSP를 이용한 극장 홈페이지.</p>
+						<p class="Box_content">&nbsp;- 회원가입 및 로그인 관련</p>
+						<p class="Box_content">&nbsp;- 영화목록 및 상세정보</p>
+						<p class="Box_content">&nbsp;- 영화예매 및 관리</p>
+						<p class="Box_content">&nbsp;- 평점 및 댓글</p>
+					</div>
 				</div>
-			</div>
-			<div class="row team-item gtco-team-reverse">
 			</div>
 		</div>
 	</section>
