@@ -51,13 +51,27 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-	
 		<style>
 			.skill {width:100% !important; float:none; text-align:center;}
 			.skill_content {display:inline-block !important; margin:0 15px 80px 15px;}
 			.gtco-copy h3 {font-size:25px; font-weight:bold;}
 			
-			.display-tc span {margin-bottom:30px; font-size:5vh; line-height:1.5; font-weight:100; marign:0; padding:0; color:white; opacity:0; font-family:"Open Sans", Arial, sans-serif;}
+			.display-tc span {margin-bottom:30px; font-size:5vw; line-height:1.5; font-weight:100; marign:0; padding:0; color:white; opacity:0; font-family:"Open Sans", Arial, sans-serif;}
+			.display-tc h1 {font-size:4vw !important;}
+			
+			.subh1:after {
+			bottom: 0;
+			left: 50%;
+			margin-left: -36px;
+			content: "";
+			position: absolute;
+			width: 72px;
+			height: 2px;
+			background:#7ED321;
+			}
+			
+			#gtco-offcanvas {padding:69px 40px 45px 10px !important; width:auto;}
+			table:hover {opacity:0.4;}
 		</style>
 	</head>
 	<body>
@@ -71,10 +85,10 @@
 				<div class="col-xs-10 text-right menu-1 main-nav" style="width:auto !important;">
 					<ul>
 						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-						<li><a href="#" data-nav-section="about">About</a></li>
+						<li><a href="#" data-nav-section="about">About_Me</a></li>
 						<li><a href="#" data-nav-section="practice-areas">My_Skill</a></li>
-						<li><a href="#" data-nav-section="our-team">Our Team</a></li>
-						<li class="btn-cta"><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
+						<li><a href="#" data-nav-section="our-team">My_Project</a></li>
+						<li class="btn-cta"><a href="#" data-nav-section="contact"><span>Contact_Me</span></a></li>
 						<!-- For external page link -->
 						<!-- <li><a href="http://freehtml5.co/" class="external">External</a></li> -->
 					</ul>
@@ -92,12 +106,11 @@
 					<div class="display-t">
 						<div class="display-tc">
 							<h1 class="animate-box" data-animate-effect="fadeIn">안녕하세요.</h1>
-<!-- 							<h1 class="animate-box" data-animate-effect="fadeIn">개발자 강철준입니다.</h1> -->
-						<div class="animate-box" style="margin-bottom:15px;">
-							<span style="opacity:1;">개발자&nbsp;</span>
-							<span style="opacity:1; border-bottom:2px solid orange">강철준</span>
-							<span style="opacity:1;">입니다.</span>
-						</div>
+							<div class="animate-box" style="margin-bottom:15px;">
+								<span style="opacity:1;">개발자&nbsp;</span>
+								<span style="opacity:1; border-bottom:2px solid #7ED321">강철준</span>
+								<span style="opacity:1;">입니다.</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -117,9 +130,9 @@
 		</div>
 	</section>
 
-	<section style="background:#f8f8f6;">
+	<section style="background:#f8f8f6;" id="gtco-practice-areas" data-section="practice-areas">
 		<div class="container">
-			<div class="row" id="gtco-practice-areas" data-section="practice-areas">
+			<div class="row">
 				<div class="col-md-6 skill">
 					<div class="animate-box" style="margin-bottom:15px;">
 						<div class="gtco-copy" style="display:inline-block;">
@@ -247,41 +260,42 @@
 		</div>
 	</section>
 
-	<section id="gtco-our-team" data-section="our-team">
-		<div class="container">
-			<div class="row row-pb-md">
-				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-					<h1>Our Team</h1>
-					<p class="sub">Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-					<p class="subtle-text animate-box" data-animate-effect="fadeIn">Our Team</p>
+	<section id="gtco-our-team" data-section="our-team" style="padding:0; background:rgb(240,240,238);">
+		<div class="container" style="padding:7em 0;">
+			<div class="row row-pb-md" style="padding:0 !important; margin:0;">
+				<div class="col-md-8 animate-box" data-animate-effect="fadeIn" style="padding:0; margin-bottom:20px; width:100%; text-align:center;">
+					<h1 class="subh1" style="margin-bottom:15px;">My Project</h1>
+				</div>
+				<div class="col-md-8 animate-box" data-animate-effect="fadeIn" style="padding:0; margin-bottom:20px; width:100%; text-align:center; display:inline-block;">
+					<table style="width:100%; height:100%; display:inline-block; border:1px solid #000; box-shadow:5px 5px; cursor:pointer;" onclick="fn_go('1')">
+					<script>
+						function fn_go(gbn){
+							if(gbn=="1"){
+								location.href="http://kcjcinema.cafe24.com/";
+							}
+						}
+					</script>
+						<colgroup>
+							<col style="width:35%;">
+							<col style="width:64.9%;">
+						</colgroup>
+						<tr>
+							<td>
+								<div class="gtco-icon" style="width:100%;">
+									<img src="images/kcjcinema_project.png" alt="sqlyog" style="width:100%;">
+								</div>								
+							</td>
+							<td style="vertical-align:top; text-align:left; padding-left:15px;">
+								<p style="margin:0 10px 10px 10px; font-weight:bold;">KCJ CINMEA</p>
+								<p style="margin:0 10px 10px 10px;">개발기간 : 2018.12 ~ 2019.4</p>
+								<p style="margin:0 10px 10px 10px;">'회원가입 및 로그인', '영화 관련 정보', '영화 예약 및 관리', '영화 관련 댓글 및 평점' 을 구현한 극장 홈페이지 개발.</p>								
+							</td>
+						</tr>
+					</table>
 				</div>
 			</div>
 			<div class="row team-item gtco-team-reverse">
-				<div class="col-md-6 col-md-push-7 animate-box" data-animate-effect="fadeInRight">
-					<div class="img-shadow">
-						<img src="images/img_team_1.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					</div>
-				</div>
-				<div class="col-md-6  col-md-pull-6 animate-box" data-animate-effect="fadeInRight">
-					<h2>Jeff Finley</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aliquid maiores, voluptatum ex. Accusantium, eum distinctio laudantium. Perferendis dolor, corporis quasi? Tempore quod molestiae quis cumque pariatur dolore vel sit, fugit delectus quasi reprehenderit officia voluptate incidunt, culpa odit impedit qui dolorum fugiat. Quidem possimus reprehenderit, quae recusandae voluptatibus magnam!</p>
-					<p>Ratione facilis quod laborum eaque illo dolore blanditiis nobis dicta voluptatem fugit optio, eveniet non dolor quia delectus, sint, dignissimos atque porro consequuntur unde. Soluta ex necessitatibus delectus saepe aliquam, culpa officiis doloremque, ipsa facere hic, voluptatem accusantium veniam, quasi! Explicabo accusantium sint, corporis consequuntur fugit ipsam, dolorum excepturi adipisci.</p>
-				</div>
 			</div>
-
-			<div class="row team-item gtco-team">
-				<div class="col-md-6 col-md-pull-1 animate-box"  data-animate-effect="fadeInLeft">
-					<div class="img-shadow">
-						<img src="images/img_team_2.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-					</div>
-				</div>
-				<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-					<h2>Craig Campbell</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus aliquid maiores, voluptatum ex. Accusantium, eum distinctio laudantium. Perferendis dolor, corporis quasi? Tempore quod molestiae quis cumque pariatur dolore vel sit, fugit delectus quasi reprehenderit officia voluptate incidunt, culpa odit impedit qui dolorum fugiat. Quidem possimus reprehenderit, quae recusandae voluptatibus magnam!</p>
-					<p>Ratione facilis quod laborum eaque illo dolore blanditiis nobis dicta voluptatem fugit optio, eveniet non dolor quia delectus, sint, dignissimos atque porro consequuntur unde. Soluta ex necessitatibus delectus saepe aliquam, culpa officiis doloremque, ipsa facere hic, voluptatem accusantium veniam, quasi! Explicabo accusantium sint, corporis consequuntur fugit ipsam, dolorum excepturi adipisci.</p>
-				</div>
-			</div>
-
 		</div>
 	</section>
 
@@ -328,28 +342,28 @@
 		</div>
 	</section>
 	
-	<footer id="gtco-footer" role="contentinfo">
-		<div class="container">
+<!-- 	<footer id="gtco-footer" role="contentinfo"> -->
+<!-- 		<div class="container"> -->
 			
-			<div class="row copyright">
-				<div class="col-md-12">
-					<p class="pull-left">
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
-					</p>
-					<p class="pull-right">
-						<ul class="gtco-social-icons pull-right">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-						</ul>
-					</p>
-				</div>
-			</div>
+<!-- 			<div class="row copyright"> -->
+<!-- 				<div class="col-md-12"> -->
+<!-- 					<p class="pull-left"> -->
+<!-- 						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>  -->
+<!-- 						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small> -->
+<!-- 					</p> -->
+<!-- 					<p class="pull-right"> -->
+<!-- 						<ul class="gtco-social-icons pull-right"> -->
+<!-- 							<li><a href="#"><i class="icon-twitter"></i></a></li> -->
+<!-- 							<li><a href="#"><i class="icon-facebook"></i></a></li> -->
+<!-- 							<li><a href="#"><i class="icon-linkedin"></i></a></li> -->
+<!-- 							<li><a href="#"><i class="icon-dribbble"></i></a></li> -->
+<!-- 						</ul> -->
+<!-- 					</p> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
 
-		</div>
-	</footer>
+<!-- 		</div> -->
+<!-- 	</footer> -->
 	</div>
 
 	<div class="gototop js-top">
