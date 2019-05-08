@@ -52,67 +52,74 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 		<style>
+			.gtco-nav .container {width:auto !important; text-align:right; padding:0 5%;}
+			.gtco-nav .container .row {display:inline-block;}
+			.gtco-nav .container .row .col-xs-10 {width:auto !important;}
+			
+			.gtco-cover {height:100vh !important; background-image: url(images/img_bg_4.jpg);}
+			#gtco-offcanvas {padding:69px 40px 45px 10px !important; width:auto;}
+			.display-tc span {animation:blink 1s step-end infinite; font-size:3.5vw; line-height:1.5; font-weight:100; margin:0; padding:0; color:white; opacity:0; font-family:"Open Sans", Arial, sans-serif;}
+			
+			/* My_Skill Section */
 			.skill {width:100% !important; float:none; text-align:center;}
 			.skill_content {display:inline-block !important; margin:0 15px 80px 15px;}
 			.gtco-copy h3 {font-size:25px; font-weight:bold;}
 			
- 			.display-tc span {animation:blink 1s step-end infinite; margin-bottom:30px; font-size:4vw; line-height:1.5; font-weight:100; marign:0; padding:0; color:white; opacity:0; font-family:"Open Sans", Arial, sans-serif;}
-/* 			.display-tc h1 {font-size:4vw !important;} */
-			
-			#gtco-offcanvas {padding:69px 40px 45px 10px !important; width:auto;}
-			
-			.Row {display:flex; flex-wrap:wrap;}
-			.Box {height: 360px; min-width:70vw; max-width:80vw; border-radius:10px; margin:0 auto 30px; background: #ffffff; box-shadow:5px 5px 10px rgba(0,0,0,.2), 5px 5px 10px rgba(0,0,0,.2); overflow:hidden;}
-			.Box_info {padding:10px 0; height:100%;}
-			.Box_image {float:left; width:35%; height:360px; margin-right:2rem;}
-			.Box_title {font-size:1.5em; font-weight:bold; margin:10px;}
-			.Box_date {font-size:1em; margin:10px;}
-			.Box_content {font-size:1em; margin:10px;}
-			
+			/* My_Project Section */
+			.my_project {display:flex; flex-wrap:wrap;}
+			.my_project .p_title {padding:0; margin-bottom:20px; width:100%; text-align:center;}
+			.my_project .p_title h1{margin-bottom:15px; font-size:2em}
+			.my_project .p_content {height: 360px; min-width:70vw; max-width:80vw; border-radius:10px; margin:0 auto 30px; background: #ffffff; box-shadow:5px 5px 10px rgba(0,0,0,.2), 5px 5px 10px rgba(0,0,0,.2); overflow:hidden; cursor:pointer;}
+			.my_project .p_content .p_content_image {float:left; width:35%; height:360px; margin-right:2rem;}
+			.my_project .p_content .p_content_image img{width:100%; height:360px;}
+			.my_project .p_content .p_content_info {padding:10px 0; height:100%;}
+			.my_project .p_content .p_content_info .p_content_title {font-size:1.5em; font-weight:bold; margin:10px;}
+			.my_project .p_content .p_content_info .p_content_date  {font-size:1em; margin:10px;}
+			.my_project .p_content .p_content_info .p_content_content  {font-size:1em; margin:10px;}
+			.p_content:hover {opacity:0.6;}
 			@media all and (max-width:576px){
-				.Box, .Row {width:100%;}
-				.Box {margin-right:3%; margin-left:3%; max-width:100%; height:50%;}
-				.Box_info{height:100%;}
-				.Box_image{float:left; height:59%; width:100%;}
-				.Box_image image{width:100%;}
-				.Box_title {font-size:1.5em; font-weight:bold; margin:10px;}
-				.Box_date {font-size:1em; margin:10px;}
-				.Box_content {font-size:1em; margin:10px;}
+				.p_content, .my_project {width:100%;}
+				.my_project .p_content {margin-right:3%; margin-left:3%; max-width:100%; height:50%;}
+				.my_project .p_content .p_content_info {height:100%;}
+				.my_project .p_content .p_content_image {float:left; height:59%; width:100%;}
+				.my_project .p_content .p_content_image img{width:100%;}
+				.my_project .p_content .p_content_info .p_content_title {font-size:1.5em; font-weight:bold; margin:10px;}
+				.my_project .p_content .p_content_info .p_content_date  {font-size:1em; margin:10px;}
+				.my_project .p_content .p_content_info .p_content_content .p_content_content  {font-size:1em; margin:10px;}
 			}
+			
+			.gtco-contact h1 {font-size:3em; margin-bottom:30px;}
+			.gtco-contact p {position:relative; padding-bottom:40px; font-size:18px; color:#757575; font-size:1.5em; padding:0;}
 		</style>
 	</head>
 	<body>
-		
+	<!-- 로딩바 -->
 	<div class="gtco-loader"></div>
-	
 	<div id="page">
 	<nav class="gtco-nav" role="navigation">
-		<div class="container" style="width:auto !important; text-align:right; padding:0 5%;">
-			<div class="row" style="display:inline-block;">
-				<div class="col-xs-10 text-right menu-1 main-nav" style="width:auto !important;">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-10 text-right menu-1 main-nav">
 					<ul>
 						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
 						<li><a href="#" data-nav-section="about">About_Me</a></li>
 						<li><a href="#" data-nav-section="practice-areas">My_Skill</a></li>
 						<li><a href="#" data-nav-section="our-team">My_Project</a></li>
 						<li class="btn-cta"><a href="#" data-nav-section="contact"><span>Contact_Me</span></a></li>
-						<!-- For external page link -->
-						<!-- <li><a href="http://freehtml5.co/" class="external">External</a></li> -->
 					</ul>
 				</div>
 			</div>
-			
 		</div>
 	</nav>
-
-	<section id="gtco-hero" class="gtco-cover" style="height:100vh !important; background-image: url(images/img_bg_4.jpg);"  data-section="home"  data-stellar-background-ratio="0.5">
+	
+	<!-- 메인 문구 -->
+	<section id="gtco-hero" class="gtco-cover" data-section="home"  data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0 text-center">
 					<div class="display-t">
 						<div class="display-tc">
-<!-- 							<h1 class="animate-box" data-animate-effect="fadeIn">안녕하세요.</h1> -->
 							<div style="margin-bottom:15px;">
 								<span style="opacity:1;">안녕하세요. 개발자&nbsp;</span>
 								<span style="opacity:1; border-bottom:2px solid #7ED321">강철준</span>
@@ -125,6 +132,7 @@
 		</div>
 	</section>
 	
+	<!-- About Me -->
 	<section id="gtco-about" data-section="about">
 		<div class="container">
 			<div class="row row-pb-md">
@@ -137,6 +145,7 @@
 		</div>
 	</section>
 
+	<!-- Skill -->
 	<section style="background:#f8f8f6;" id="gtco-practice-areas" data-section="practice-areas">
 		<div class="container">
 			<div class="row">
@@ -151,35 +160,30 @@
 						<div class="gtco-icon">
 							<img src="images/html5_logo.png" alt="html5_language">
 						</div>
-						<div class="gtco-copy"></div>
 					</div>
 					
 					<div class="skill_content">
 						<div class="gtco-icon">
 							<img src="images/css3_logo.png" alt="css3_language">
 						</div>
-						<div class="gtco-copy"></div>
 					</div>
 
 					<div class="skill_content">
 						<div class="gtco-icon">
 							<img src="images/js-logoss.png" alt="js_language">
 						</div>
-						<div class="gtco-copy"></div>
 					</div>
 					
 					<div class="skill_content">
 						<div class="gtco-icon">
 							<img src="images/c_logo.png" alt="c_language">
 						</div>
-						<div class="gtco-copy"></div>
 					</div>
 					
 					<div class="skill_content">
 						<div class="gtco-icon">
 							<img src="images/java_logo.png" alt="java_language">
 						</div>
-						<div class="gtco-copy"></div>
 					</div>
 				</div>
 
@@ -193,14 +197,12 @@
 						<div class="gtco-icon">
 							<img src="images/spring_logo.png" alt="spring framework">
 						</div>
-						<div class="gtco-copy"></div>
 					</div>
 					
 					<div class="skill_content">
 						<div class="gtco-icon">
 							<img src="images/jsp_icon.png" alt="jsp">
 						</div>
-						<div class="gtco-copy"></div>
 					</div>
 				</div>
 				
@@ -215,7 +217,6 @@
 						<div class="gtco-icon">
 							<img src="images/mysql_logo.png" alt="mysql_database">
 						</div>
-						<div class="gtco-copy"></div>
 					</div>
 				</div>
 				
@@ -230,7 +231,6 @@
 						<div class="gtco-icon">
 							<img src="images/windows_logo.png" alt="windows">
 						</div>
-						<div class="gtco-copy"></div>
 					</div>
 				</div>
 				
@@ -245,21 +245,18 @@
 						<div class="gtco-icon">
 							<img src="images/github_logo.png" alt="github">
 						</div>
-						<div class="gtco-copy"></div>
 					</div>
 					
 					<div class="skill_content">
 						<div class="gtco-icon">
 							<img src="images/eclipse_logo.png" alt="eclipse">
 						</div>
-						<div class="gtco-copy"></div>
 					</div>
 					
 					<div class="skill_content">
 						<div class="gtco-icon">
 							<img src="images/sqlyog_logo.png" alt="sqlyog">
 						</div>
-						<div class="gtco-copy"></div>
 					</div>
 				</div>
 				
@@ -267,26 +264,25 @@
 		</div>
 	</section>
 
+	<!-- My Project -->
 	<section id="gtco-our-team" data-section="our-team" style="padding:7em 0; background:rgb(240,240,238);">
 		<div class="Container">
-			<div class="Row">
-				<div class="animate-box" data-animate-effect="fadeIn" style="padding:0; margin-bottom:20px; width:100%; text-align:center;">
-					<h1 style="margin-bottom:15px; font-size:2em">My Project.</h1>
+			<div class="my_project">
+				<div class="p_title animate-box" data-animate-effect="fadeIn">
+					<h1>My Project.</h1>
 				</div>
-				<div class="Box" style="cursor:pointer;" onclick="fn_go('1');">
-					<div class="Box_image">
-						<a href="https://github.com/weaklion/React-spa">
-							<img class="image" alt="sia" src="images/kcjcinema_project.png" style="width:100%; height:360px;">
-						</a>
+				<div class="p_content" onclick="fn_go('1');">
+					<div class="p_content_image">
+						<img src="images/kcjcinema_project.png">
 					</div>
-					<div class="Box_info">
-						<p class="Box_title">KCJ CINEMA</h1>
-						<p class="Box_date">개발기간 :2018.12 ~ 2019.04</h2>
-						<p class="Box_content">스프링 프레임워크 및 JSP를 이용한 극장 홈페이지.</p>
-						<p class="Box_content">&nbsp;- 회원가입 및 로그인 관련</p>
-						<p class="Box_content">&nbsp;- 영화목록 및 상세정보</p>
-						<p class="Box_content">&nbsp;- 영화예매 및 관리</p>
-						<p class="Box_content">&nbsp;- 평점 및 댓글</p>
+					<div class="p_content_info">
+						<p class="p_content_title">KCJ CINEMA</h1>
+						<p class="p_content_date">개발기간 :2018.12 ~ 2019.04</h2>
+						<p class="p_content_content">스프링 프레임워크 및 JSP를 이용한 극장 홈페이지.</p>
+						<p class="p_content_content">&nbsp;- 회원가입 및 로그인 관련</p>
+						<p class="p_content_content">&nbsp;- 영화목록 및 상세정보</p>
+						<p class="p_content_content">&nbsp;- 영화예매 및 관리</p>
+						<p class="p_content_content">&nbsp;- 평점 및 댓글</p>
 					</div>
 				</div>
 			</div>
@@ -300,72 +296,18 @@
 		}
 	</script>
 
-	<section id="gtco-contact" data-section="contact">
+	<section id="gtco-contact" class="gtco-contact" data-section="contact">
 		<div class="container">
 			<div class="row row-pb-md">
 				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
-					<h1>Contact Us</h1>
-					<p class="sub">Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-					<p class="subtle-text animate-box" data-animate-effect="fadeIn">Contact</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 col-md-push-6 animate-box">
-					<form action="#">
-						<div class="form-group">
-							<label for="name" class="sr-only">Name</label>
-							<input type="text" class="form-control" placeholder="Name" id="name">
-						</div>
-						<div class="form-group">
-							<label for="email" class="sr-only">Email</label>
-							<input type="text" class="form-control" placeholder="Email" id="email">
-						</div>
-						<div class="form-group">
-							<label for="message" class="sr-only">Message</label>
-							<textarea name="message" id="message" class="form-control" cols="30" rows="7" placeholder="Message"></textarea>
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Send Message" class="btn btn-primary">
-						</div>
-					</form>
-				</div>
-				<div class="col-md-4 col-md-pull-6 animate-box">
-					<div class="gtco-contact-info">
-						<ul>
-							<li class="address">198 West 21th Street, Suite 721 New York NY 10016</li>
-							<li class="phone"><a href="tel://1235235598">+ 1235 2355 98</a></li>
-							<li class="email"><a href="mailto:info@yoursite.com">info@example.com</a></li>
-							<li class="url"><a href="#">http://example.com</a></li>
-						</ul>
-					</div>
+					<h1>Contact Me.</h1>
+					<p>Email1 : steeljoon@gmail.com</p>
+					<p>Address : 010-3474-6927</p>
 				</div>
 			</div>
 		</div>
 	</section>
-	
-<!-- 	<footer id="gtco-footer" role="contentinfo"> -->
-<!-- 		<div class="container"> -->
-			
-<!-- 			<div class="row copyright"> -->
-<!-- 				<div class="col-md-12"> -->
-<!-- 					<p class="pull-left"> -->
-<!-- 						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>  -->
-<!-- 						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small> -->
-<!-- 					</p> -->
-<!-- 					<p class="pull-right"> -->
-<!-- 						<ul class="gtco-social-icons pull-right"> -->
-<!-- 							<li><a href="#"><i class="icon-twitter"></i></a></li> -->
-<!-- 							<li><a href="#"><i class="icon-facebook"></i></a></li> -->
-<!-- 							<li><a href="#"><i class="icon-linkedin"></i></a></li> -->
-<!-- 							<li><a href="#"><i class="icon-dribbble"></i></a></li> -->
-<!-- 						</ul> -->
-<!-- 					</p> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-
-<!-- 		</div> -->
-<!-- 	</footer> -->
-	</div>
+</div>
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
@@ -389,4 +331,3 @@
 
 	</body>
 </html>
-
